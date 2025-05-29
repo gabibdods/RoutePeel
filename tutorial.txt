@@ -1,0 +1,9 @@
+browser: download the .iso image from the official website
+
+OS: use the Ballena Etcher software to flash the image onto a USB drive to turn it into a boot drive
+
+hardware: plug in the boot drive and enter the boot menu by restarting the computer and pressing the ESC/F2/F12 button, depending on your motherboard
+
+BIOS: boot from the boot drive
+
+OS: follow the prompts to prepare Tails for production use
