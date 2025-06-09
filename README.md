@@ -45,6 +45,87 @@ Reading about Tor and the deep web provides theoretical knowledge, but I wanted 
 
 ---
 
+## ⚙️ How to Create a Tails OS Bootable Drive
+
+Here’s how I set up Tails OS from scratch for this project:
+
+### 1️⃣ Download the Tails ISO
+
+- Open your browser and download the latest **Tails OS ISO image** from the [official Tails website](https://tails.net).
+
+### 2️⃣ Flash the ISO to a USB Drive
+
+- Use the **Balena Etcher** software (or similar) to flash the Tails image onto a USB drive.
+- This turns the USB drive into a **bootable Tails drive**.
+
+### 3️⃣ Boot from the USB Drive
+
+- Plug in the bootable USB drive to your computer.
+- Restart the computer and enter the **boot menu** by pressing a key during startup (`ESC`, `F2`, or `F12`, depending on your motherboard).
+
+### 4️⃣ Configure the BIOS
+
+- In the boot menu, **select the USB drive** as the boot device.
+
+### 5️⃣ Set Up Tails OS
+
+- Follow the Tails OS prompts to prepare the system for production use.
+- Choose language settings, keyboard layout, and connect to the Tor network.
+
+---
+
+## 🚀 Access the Deep Web
+
+Once booted into Tails:
+
+1. Launch the **Tor Browser** (built into Tails).
+2. Visit DuckDuckGo’s .onion mirror: https://3g2upl4pq6kufc4m.onion
+3. Explore other `.onion` services cautiously and anonymously.
+
+---
+
+## 📈 Challenges Faced
+
+- Configuring and verifying the Tails bootable drive
+- Understanding how to route and test Tor connections via relays
+- Getting familiar with Tails-specific behaviors (session-based file system, non-persistence)
+
+**Solution:** I followed an in-depth tutorial from cybersecurity expert **David Bombal**, who originally inspired this project through his interviews and practical demonstrations.
+
+---
+
+## 📚 Lessons Learned
+
+### 🌐 Cybersecurity Knowledge
+- The **deep web** can contain **serious threats**, including malicious actors—so using recommended precautions is essential.
+- Learned how **Tor anonymizes traffic** using layered relays.
+- Understood the strict security and anonymity features of **Tails OS**.
+- Gained practical knowledge of `.onion` domains and their risks.
+
+### 🧪 Practical Skills
+- Verified software integrity with **OpenPGP**.
+- Flashed and booted secure **live USB systems**.
+- Explored **deep web access** under anonymized, controlled conditions.
+
+---
+
+## 🔄 Future Enhancements
+
+- Set up and configure a personal **non-exit Tor relay node**.
+- Explore building a **.onion service** of my own.
+- Use **Whonix** or **Qubes OS** to compare different privacy-focused operating systems.
+- Begin learning **penetration testing tools** like Metasploit or Nmap inside isolated environments.
+
+---
+
+## 🛠️ Additional Tips
+
+✅ **Verify the ISO signature** (with OpenPGP) to ensure your download is authentic and secure.  
+✅ **Always use trusted sources** when downloading privacy-focused OSs and tools.  
+✅ **Avoid using personal accounts** or identifying information when exploring the deep web.
+
+---
+
 ## 📈 Challenges Faced
 
 - Properly configuring and verifying the Tails bootable drive
