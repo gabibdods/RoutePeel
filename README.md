@@ -128,3 +128,45 @@ Once booted into Tails:
 - Set up and configure a personal **non-exit Tor relay node**
 - Use **Whonix** or **Qubes OS** to compare different privacy-focused operating systems
 - Begin learning **penetration testing tools** like Metasploit or Nmap inside isolated environments
+
+---
+
+## 🖥️ Architecture Overview
+
+```plaintext
++--------------------------+
+|  Bootable USB Drive      |
+|  (Tails OS Environment)  |
++-----------+--------------+
+            |
+            v
++--------------------------+
+|     Tails OS Boots       |
+| RAM-based, non-persistent|
++-----------+--------------+
+            |
+            v
++--------------------------+
+|   Tor Browser Launches   |
+|   Built-in to Tails OS   |
++-----------+--------------+
+            |
+            v
++--------------------------+
+| Connect to Tor Network   |
+| - Entry Guard Node       |
+| - Middle Relay Node      |
+| - Exit Node (N/A for .onion) |
++-----------+--------------+
+            |
+            v
++--------------------------+
+| .onion Request Routed    |
+|  via Hidden Service Dir  |
++-----------+--------------+
+            |
+            v
++--------------------------+
+| DuckDuckGo .onion Server |
+| (3g2upl4pq6kufc4m.onion) |
++--------------------------+
