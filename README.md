@@ -4,22 +4,23 @@
 
 ### Description
 
-- A self-contained cybersecurity lab designed to explore and safely interact with .onion websites using Tails OS, Tor relays, and digital signature verification practices.
-- The project includes configuring a secure USB boot drive, verifying image integrity with OpenPGP, and browsing anonymously via DuckDuckGo’s onion mirror.
+- A self-contained cybersecurity lab designed to explore and safely interact with .onion websites using Tails OS, Tor relays, and digital signature verification practices
+- The project includes configuring a secure USB boot drive, verifying image integrity with OpenPGP, and browsing anonymously via DuckDuckGo’s onion mirror
 
 ---
 
 ## NOTICE
 
-- Please read through this `README.md` to better understand the project's source code and setup instructions.
-- Also, make sure to review the contents of the `License/` directory.
+- Please read through this `README.md` to better understand the project's source code and setup instructions
+- Also, make sure to review the contents of the `License/` directory
 - Your attention to these details is appreciated — enjoy exploring the project!
 
 ---
 
 ## Problem Statement
 
-- Theoretical knowledge of Tor and privacy tools is not enough — hands-on application is crucial for real cybersecurity learning. This project was created to gain practical experience with anonymous browsing, system-level privacy measures, and relay-based routing.
+- Theoretical knowledge of Tor and privacy tools is not enough — hands-on application is crucial for real cybersecurity learning
+- This project was created to gain practical experience with anonymous browsing, system-level privacy measures, and relay-based routing
 
 ---
 
@@ -27,11 +28,11 @@
 
 ### Securely Access Onion Websites
 
-- Establish connections to onion services through layered Tor relays and verify functionality using DuckDuckGo’s hidden service.
+- Establish connections to onion services through layered Tor relays and verify functionality using DuckDuckGo’s hidden service
 
 ### Use Tails OS for Anonymity
 
-- Operate within a bootable Linux distribution (Tails) designed for non-persistent, encrypted, and anonymous computing.
+- Operate within a bootable Linux distribution (Tails) designed for non-persistent, encrypted, and anonymous computing
 
 ---
 
@@ -55,15 +56,15 @@
 
 ### Use Tails Instead of Installing Tor Locally
 
-- Ensures a clean, ephemeral OS each boot, dramatically reducing digital traceability.
+- Ensures a clean, ephemeral OS each boot, dramatically reducing digital traceability
 
 ### Flash and Verify the OS with Balena Etcher + OpenPGP
 
-- Verifies authenticity of the ISO and builds confidence in OS trustworthiness.
+- Verifies authenticity of the ISO and builds confidence in OS trustworthiness
 
 ### Limit Exploration to DuckDuckGo’s Onion Mirror
 
-- Demonstrates functional access while minimizing risk by using a reputable onion service.
+- Demonstrates functional access while minimizing risk by using a reputable onion service
 
 ---
 
@@ -71,15 +72,15 @@
 
 ### Anonymous Boot Environment
 
-- All system state runs from memory and is erased upon shutdown.
+- All system state runs from memory and is erased upon shutdown
 
 ### Verified System Integrity
 
-- ISO signature verification prevents tampered OS installation.
+- ISO signature verification prevents tampered OS installation
 
 ### Live .onion Browsing via Tor
 
-- Full support for secure, multi-relay access to the dark web.
+- Full support for secure, multi-relay access to the dark web
 
 ---
 
@@ -124,27 +125,26 @@
 | DuckDuckGo .onion Server |
 | (3g2upl4pq6kufc4m.onion) |
 +--------------------------+
+
 ```
 
 ---
 
 ## Functional Overview
 
-- The user prepares a Tails boot drive, verifies it, connects to the Tor network, and explores .onion services from a live session environment with no local persistence.
+- The reader prepares a Tails boot drive, verifies it, connects to the Tor network, and explores .onion services from a live session environment with no local persistence
 
 ---
 
 ## Challenges & Solutions
 
-### Image Integrity & Verification
+### Understanding how to verify the authenticity of downloaded ISO files
 
-- Challenge: Understanding how to verify the authenticity of downloaded ISO files.
-- Solution: Used OpenPGP signatures provided by the Tails developers to validate the download.
+- Used OpenPGP signatures provided by the Tails developers to validate the download
 
-### Securely Booting Tails
+### Configuring BIOS/UEFI settings to recognize the USB drive
 
-- Challenge: Configuring BIOS/UEFI settings to recognize the USB drive.
-- Solution: Used Balena Etcher and consulted Tails boot documentation to ensure compatibility.
+- Used Balena Etcher and consulted Tails boot documentation to ensure compatibility
 
 ---
 
@@ -152,11 +152,11 @@
 
 ### Security Procedures in Practice
 
-- Gained a real understanding of Tor routing layers, encrypted traffic, and .onion address resolution through experimentation.
+- Gained a real understanding of Tor routing layers, encrypted traffic, and .onion address resolution through experimentation
 
 ### Verified Boot Hygiene
 
-- Importance of boot-only OS designs for privacy — no residual data or file traces after shutdown.
+- Importance of boot-only OS designs for privacy — no residual data or file traces after shutdown
 
 ---
 
