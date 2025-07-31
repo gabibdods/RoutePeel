@@ -1,137 +1,91 @@
-# 🧅 Deep Web Exploration with Tails and Tor Relays
+# Deep Web Exploration with Tails and Tor Relays
 
-A practical cybersecurity experiment to deepen understanding of Tor networks/relays, .onion websites, and anonymous browsing practices using the **Tails**, an operating system built specifically for privacy and security, acronym for The Amnesic Incognito Live System. This project demonstrates secure navigation of the dark web and onion services, including a connection to DuckDuckGo’s onion mirror.
+# Private Cybersecurity Field Test: Exploring Onion Services via Tails OS
 
----
+### Description
 
-## 🔍 Problem Statement
-
-Reading about Tor and the deep web provides theoretical knowledge, but I wanted **real-world, hands-on experience** with:
-- Navigating .onion services securely
-- Understanding how Tor relays work
-- Using privacy-preserving operating systems
-- Verifying digital signatures for secure system installations
+- A self-contained cybersecurity lab designed to explore and safely interact with .onion websites using Tails OS, Tor relays, and digital signature verification practices.
+- The project includes configuring a secure USB boot drive, verifying image integrity with OpenPGP, and browsing anonymously via DuckDuckGo’s onion mirror.
 
 ---
 
-## 🎯 Project Goals
+## NOTICE
 
-- Connect securely to an **onion website** (DuckDuckGo's: `https://3g2upl4pq6kufc4m.onion`) through **multiple Tor relays**
-- Use **Tails**, a Debian-based Linux distribution designed for anonymity
-- Explore **practical privacy measures** like bootable OS environments, digital signature verification, and system memory clearing
-- Learn about the intersection of OS security, network anonymization, and open-source tooling
-
----
-
-## 🛠️ Tools & Technologies Used
-
-- **Tails** — Live security-focused Linux distribution (from [tails.net](https://tails.net))
-- **Tor Browser** — Integrated within Tails for anonymous browsing via Tor relays
-- **Boot Drive** — Used to install and boot Tails
-- **Balena Etcher** — Tool to flash the Tails image onto the USB drive
-- **OpenPGP** — Used to verify the authenticity of the downloaded Tails image
-- **David Bombal / TCM Security** — Educational resources that guided setup and deepened my understanding
+- Please read through this `README.md` to better understand the project's source code and setup instructions.
+- Also, make sure to review the contents of the `License/` directory.
+- Your attention to these details is appreciated — enjoy exploring the project!
 
 ---
 
-## 🔐 Setup Process
+## Problem Statement
 
-1. **Downloaded Tails image** and its `.sig` file from the [official Tails website](https://tails.net)
-2. **Verified the image** using OpenPGP to ensure integrity and authenticity
-3. Used **Balena Etcher** to flash the verified image onto a USB drive
-4. Booted into **Tails** from the USB drive
-5. Launched **Tor Browser** within Tails
-6. Successfully accessed DuckDuckGo’s onion address: `https://3g2upl4pq6kufc4m.onion` through the Tor network
+- Theoretical knowledge of Tor and privacy tools is not enough — hands-on application is crucial for real cybersecurity learning. This project was created to gain practical experience with anonymous browsing, system-level privacy measures, and relay-based routing.
 
 ---
 
-## ⚙️ How to Create a Tails Bootable Drive
+## Project Goals
 
-Here’s how I set up Tails from scratch for this project:
+### Securely Access Onion Websites
 
-### 1️⃣ Download the Tails ISO
+- Establish connections to onion services through layered Tor relays and verify functionality using DuckDuckGo’s hidden service.
 
-- Open your browser and download the latest **Tails ISO image** from the [official Tails website](https://tails.net).
+### Use Tails OS for Anonymity
 
-### 2️⃣ Flash the ISO to a USB Drive
-
-- Use the **Balena Etcher** software (or similar) to flash the Tails image onto a USB drive.
-- This turns the USB drive into a **bootable Tails drive**.
-
-### 3️⃣ Boot from the USB Drive
-
-- Plug in the bootable USB drive to your computer.
-- Restart the computer and enter the **boot menu** by pressing a key during startup (`ESC`, `F2`, or `F12`, depending on your motherboard).
-
-### 4️⃣ Configure the BIOS
-
-- In the boot menu, **select the USB drive** as the boot device.
-
-### 5️⃣ Set Up Tails
-
-- Follow the Tails prompts to prepare the system for production use.
-- Choose language settings, keyboard layout, and connect to the Tor network.
+- Operate within a bootable Linux distribution (Tails) designed for non-persistent, encrypted, and anonymous computing.
 
 ---
 
-## 🚀 Access the Deep Web
+## Tools, Materials & Resources
 
-Once booted into Tails:
+### Tools
 
-1. Launch the **Tor Browser** (built into Tails).
-2. Visit DuckDuckGo’s .onion mirror: https://3g2upl4pq6kufc4m.onion
-3. Explore other `.onion` services cautiously and anonymously.
+- Tor Browser, Tails OS, Balena Etcher, OpenPGP
 
----
+### Materials
 
-## 🛠️ Additional Tips
+- USB boot drive (min. 8GB), Tails ISO image, .sig verification file
 
-✅ **Verify the ISO signature** (with OpenPGP) to ensure your download is authentic and secure.  
-✅ **Always use trusted sources** when downloading privacy-focused OSs and tools.  
-✅ **Avoid using personal accounts** or identifying information when exploring the deep web.
+### Resources
+
+- [tails.net](https://tails.net), David Bombal tutorials, TCM Security training, OpenPGP documentation
 
 ---
 
-## 📈 Challenges Faced
+## Design Decision
 
-- Properly configuring and verifying the Tails bootable drive
-- Understanding how to route and test Tor connections via relays
-- Getting familiar with Tails-specific behaviors (e.g., session-based file system, non-persistence)
+### Use Tails Instead of Installing Tor Locally
 
-**Solution:** Followed an in-depth tutorial from cybersecurity expert **David Bombal**, who originally inspired this project through his interviews and practical demonstrations.
+- Ensures a clean, ephemeral OS each boot, dramatically reducing digital traceability.
 
----
+### Flash and Verify the OS with Balena Etcher + OpenPGP
 
-## 📚 Lessons Learned
+- Verifies authenticity of the ISO and builds confidence in OS trustworthiness.
 
-### 🌐 Cybersecurity Knowledge
-- **The most important lesson:** the public internet — especially the deep web — contains **serious threats**, including individuals with malicious intent.
-  - It's crucial to use **all recommended precautions**:
-    - Route through multiple **Tor relays (nodes)**
-    - Ensure all traffic is **encrypted**
-    - Use **privacy-focused OSs** like Tails
-    - Rely on trusted browsers (like the **Tor Browser**) and verified images
-- Learned how Tor anonymizes traffic using a layered relay model
-- Understood the strict security and anonymity features of **Tails**
-- Gained practical knowledge of .onion domains and their risks
+### Limit Exploration to DuckDuckGo’s Onion Mirror
 
-### 🧪 Practical Skills
-- Verified software integrity with **OpenPGP**
-- Flashed and booted secure **live USB systems**
-- Explored **deep web access** under anonymized, controlled conditions
+- Demonstrates functional access while minimizing risk by using a reputable onion service.
 
 ---
 
-## 🚀 Future Enhancements
+## Features
 
-- Explore building a **.onion service** of my own
-- Set up and configure a personal **non-exit Tor relay node**
-- Use **Whonix** or **Qubes OS** to compare different privacy-focused operating systems
-- Begin learning **penetration testing tools** like Metasploit or Nmap inside isolated environments
+### Anonymous Boot Environment
+
+- All system state runs from memory and is erased upon shutdown.
+
+### Verified System Integrity
+
+- ISO signature verification prevents tampered OS installation.
+
+### Live .onion Browsing via Tor
+
+- Full support for secure, multi-relay access to the dark web.
 
 ---
 
-## 🖥️ Architecture Overview
+## Block Diagram
+
+### Tails + Tor Browsing Architecture
 
 ```plaintext
 +--------------------------+
@@ -170,3 +124,64 @@ Once booted into Tails:
 | DuckDuckGo .onion Server |
 | (3g2upl4pq6kufc4m.onion) |
 +--------------------------+
+```
+
+---
+
+## Functional Overview
+
+- The user prepares a Tails boot drive, verifies it, connects to the Tor network, and explores .onion services from a live session environment with no local persistence.
+
+---
+
+## Challenges & Solutions
+
+### Image Integrity & Verification
+
+- Challenge: Understanding how to verify the authenticity of downloaded ISO files.
+- Solution: Used OpenPGP signatures provided by the Tails developers to validate the download.
+
+### Securely Booting Tails
+
+- Challenge: Configuring BIOS/UEFI settings to recognize the USB drive.
+- Solution: Used Balena Etcher and consulted Tails boot documentation to ensure compatibility.
+
+---
+
+## Lessons Learned
+
+### Security Procedures in Practice
+
+- Gained a real understanding of Tor routing layers, encrypted traffic, and .onion address resolution through experimentation.
+
+### Verified Boot Hygiene
+
+- Importance of boot-only OS designs for privacy — no residual data or file traces after shutdown.
+
+---
+
+## Project Structure
+
+```plaintext
+root/
+├── License/
+│   ├── LICENSE.md
+│   │
+│   └── NOTICE.md
+│
+├── .gitattributes
+│
+├── .gitignore
+│
+└── README.md
+
+```
+
+---
+
+## Future Enhancements
+
+- Create a basic .onion service for hosting anonymous content
+- Configure and run a non-exit relay node on a remote VPS
+- Test Whonix and Qubes OS as alternatives to Tails
+- Conduct penetration testing inside isolated environments (Metasploit, Nmap)
