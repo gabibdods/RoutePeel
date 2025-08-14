@@ -15,3 +15,11 @@
 
 
 # particular repository ignores:
+
+!GUIDE.md
+
+!VM_PEEL/
+!VM_PEEL/**
+
+!VM_SEED/
+!VM_SEED/**

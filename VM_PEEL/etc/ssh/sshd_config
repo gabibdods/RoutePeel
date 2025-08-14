@@ -1,0 +1,4 @@
+# beginning of Properties file
+PermitRootLogin no
+PasswordAuthentication no
+# rest of Properties file

@@ -1,0 +1,13 @@
+[Service]
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectClock=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX AF_INET
+ReadWritePaths=/var/log/nginx /var/lib/nginx /var/cache/nginx /run/nginx
+LockPersonality=yes
+CapabilityBoundingSet=

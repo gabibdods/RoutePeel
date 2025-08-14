@@ -181,7 +181,6 @@ root/
 
 ## Future Enhancements
 
-- Create a basic .onion service for hosting anonymous content
 - Configure and run a non-exit relay node on a remote VPS
 - Test Whonix and Qubes OS as alternatives to Tails
 - Conduct penetration testing inside isolated environments (Metasploit, Nmap)

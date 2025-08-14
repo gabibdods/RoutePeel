@@ -1,0 +1,7 @@
+HiddenServiceDir /var/lib/tor/${REDACTED_PROJECT}
+HiddenServiceVersion 3
+HiddenServicePort 80 ${REDACTED_SEED_IP}:8080
+
+Sandbox 1
+SafeLogging 1
+ClientUseIPv6 0

@@ -1,0 +1,11 @@
+network:
+    version: 2
+    ethernets:
+        enp0s3:
+            dhcp4: no
+            dhcp6: no
+            addresses:
+                - ${REDACTED_PEEL_IP}/24
+        enp0s8:
+            dhcp4: yes
+            dhcp6: no
