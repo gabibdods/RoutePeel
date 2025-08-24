@@ -1,4 +1,4 @@
-# https://github.com/gabibdods/NewRepositoryTemplate:
+# https://github.com/gabibdods/NewRepo:
 *
 
 !.gitattributes
@@ -16,10 +16,11 @@
 
 # particular repository ignores:
 
+!docker-compose.yaml
 !GUIDE.md
 
-!VM_PEEL/
-!VM_PEEL/**
+!peel_vm/
+!peel_vm/**
 
-!VM_SEED/
-!VM_SEED/**
+!seed_vm/
+!seed_vm/**

@@ -1,0 +1,43 @@
+services:
+  rprs:
+    build: ./seed_vm/docker
+    container_name: rprs
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    cap_add: [CHOWN, SETUID, SETGID]
+    env_file: [.env]
+    ports: ["6660:80"]
+    volumes:
+      - ./seed_vm/docker/site:/usr/share/nginx/html/rp:ro
+    restart: no
+    networks: [gabibdods]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http:127.0.0.1:${SEED_PORT}/ || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+
+  rprp:
+    build: ./peel_vm/docker
+    container_name: rprp
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    env_file: [.env]
+    depends_on: [rprs]
+    restart: no
+    networks: [gabibdods]
+
+networks:
+  gabibdods:
+    external: true
+    internal: true
